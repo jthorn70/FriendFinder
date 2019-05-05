@@ -184,7 +184,6 @@
             });
             return isValid;
           }
-          //if everything is filled
           if (validateForm() == true) {
             //creates a new friend from the values submitted
             var newFriend = {
@@ -211,7 +210,6 @@
             var currentURL = window.location.origin;
             // posts  data to friends API.
             $.post(currentURL + "/api/friends", newFriend, function(data) {
-              //Grab the result from post so the best match's name and photo are displayed.
               $("#matchName").text(data.name);
               $("#matchPic").attr("src", data.profilePic);
             });
